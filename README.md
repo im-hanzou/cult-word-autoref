@@ -41,6 +41,7 @@ pip install -r requirements.txt
 ```bash
 pip3 install -r requirements.txt
 ```
+### If you error install web3 in termux, try [this](https://github.com/im-hanzou/takerxyz-autoref/issues/9) solution
 ## Run the Bot
 - Replace the proxies ```proxies.txt``` to your own proxies, with the format example is like:
 ```bash
