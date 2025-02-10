@@ -69,14 +69,14 @@ def log_message(message, status="info"):
         print(f"{Fore.BLUE}[{timestamp}] ℹ {message}{Style.RESET_ALL}")
 
 def get_challenge(address, proxy):
-    url = "https://cult-api-0912.ippcoin.com/auth/challenge"
+    url = "https://cults-apis-1181.ippcoin.com/auth/challenge"
     headers = {
         'accept': 'application/json, text/plain, */*',
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         'content-type': 'application/json',
         'origin': 'https://cult.world',
         'referer': 'https://cult.world/',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0'
     }
     data = {"wallet_address": address}
     
@@ -95,14 +95,14 @@ def sign_message(private_key, challenge):
     return signed_message.signature.hex()
 
 def login(address, challenge, signature, proxy, ref_code):
-    url = "https://cult-api-0912.ippcoin.com/auth/login"
+    url = "https://cults-apis-1181.ippcoin.com/auth/login"
     headers = {
         'accept': 'application/json, text/plain, */*',
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
         'content-type': 'application/json',
         'origin': 'https://cult.world',
         'referer': 'https://cult.world/',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36'
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0'
     }
     data = {
         "wallet_address": address,
