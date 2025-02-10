@@ -1,3 +1,4 @@
 requests
 eth-account
 colorama
+web3
